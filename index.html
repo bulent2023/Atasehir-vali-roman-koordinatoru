@@ -1,1157 +1,1141 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+```html
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.1">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ataşehir Valilik Roman Koordinatörlüğü</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'turquoise': {
+                            50: '#f0fdfa',
+                            100: '#ccfbf1',
+                            200: '#99f6e4',
+                            300: '#5eead4',
+                            400: '#2dd4bf',
+                            500: '#14b8a6',
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                            900: '#134e4a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+        }
+        .dark-mode {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #f8fafc;
+        }
+        .dark-mode .bg-white {
+            background-color: #1e293b !important;
+            color: #f8fafc;
+        }
+        .dark-mode .text-gray-900 {
+            color: #f8fafc !important;
+        }
+        .dark-mode .text-gray-700 {
+            color: #cbd5e1 !important;
+        }
+        .dark-mode .text-gray-600 {
+            color: #94a3b8 !important;
+        }
+        .dark-mode .border-gray-300 {
+            border-color: #334155 !important;
+        }
+        .dark-mode input, .dark-mode textarea, .dark-mode select {
+            background-color: #334155 !important;
+            color: #f8fafc !important;
+            border-color: #475569 !important;
+        }
+        .dark-mode .bg-indigo-50 {
+            background-color: #1e1b4b !important;
+            border-color: #312e81 !important;
+        }
+        .dark-mode .text-indigo-700 {
+            color: #c4b5fd !important;
+        }
+        .dark-mode .text-indigo-900 {
+            color: #e0e7ff !important;
+        }
+        .fixed-notification {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            z-index: 50;
+        }
+        .nav-link {
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+        .nav-link.active {
+            background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+            color: white !important;
+        }
+        .admin-only {
+            display: none;
+        }
+        .admin-visible {
+            display: block !important;
+        }
+    </style>
 </head>
-<body>
-<p class="p1">```html</p>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="tr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Ataşehir Valilik Roman Koordinatörlüğü&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>tailwind.config = {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>theme: {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>extend: {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>colors: {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>'turquoise': {</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>50: '#f0fdfa',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>100: '#ccfbf1',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>200: '#99f6e4',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>300: '#5eead4',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>400: '#2dd4bf',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>500: '#14b8a6',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>600: '#0d9488',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>700: '#0f766e',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>800: '#115e59',</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>900: '#134e4a'</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #f8fafc;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .bg-white {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1e293b !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #f8fafc;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .text-gray-900 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #f8fafc !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .text-gray-700 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #cbd5e1 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .text-gray-600 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #94a3b8 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .border-gray-300 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #334155 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode input, .dark-mode textarea, .dark-mode select {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #334155 !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #f8fafc !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #475569 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .bg-indigo-50 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: #1e1b4b !important;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>border-color: #312e81 !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .text-indigo-700 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #c4b5fd !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.dark-mode .text-indigo-900 {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: #e0e7ff !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.fixed-notification {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>top: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>right: 1rem;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>z-index: 50;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-link {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-link:hover {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.nav-link.active {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.admin-only {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.admin-visible {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>display: block !important;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="min-h-screen"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Header --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="bg-white shadow-lg border-b-4 border-turquoise-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row md:items-center md:justify-between"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center space-x-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="bg-turquoise-600 p-3 rounded-full"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-map-marker-alt text-white text-xl"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h1 class="text-2xl md:text-3xl font-bold text-gray-900"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Ataşehir Valilik Roman Koordinatörlüğü</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-gray-600 mt-1"&gt;Dezavantajlı Roman Halkı Destek Sistemi&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-4 md:mt-0 flex items-center space-x-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex flex-col space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-phone text-turquoise-600"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-medium"&gt;545 774 27 53&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2 text-gray-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-envelope text-turquoise-600"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="font-medium"&gt;atasehirvalikoordinatoru@gmail.com&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="themeToggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-moon text-gray-600"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button id="adminLoginBtn" class="p-2 rounded-lg bg-turquoise-100 hover:bg-turquoise-200 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-lock text-turquoise-600"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Admin Login Modal --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="adminLoginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white rounded-xl p-6 w-full max-w-md mx-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-center mb-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 class="text-lg font-semibold text-gray-900"&gt;Yönetici Girişi&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button id="closeLoginModal" class="text-gray-400 hover:text-gray-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-times"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="adminLoginForm" class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;Şifre&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>type="password"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>id="adminPassword"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>placeholder="Yönetici şifresini girin"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>required</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>type="submit"</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>class="w-full bg-turquoise-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-turquoise-700 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2 transition-colors duration-200"</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Giriş Yap</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navigation --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="bg-white shadow-md border-b border-gray-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex space-x-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium" data-tab="form"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>İhtiyaç Bildirimi</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="submissions"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Başvurular</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="stats"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>İstatistikler</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="management"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Veri Yönetimi</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Success/Error Messages --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="successMessage" class="fixed-notification bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fas fa-check-circle"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Başvurunuz başarıyla kaydedildi!&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="errorMessage" class="fixed-notification bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;i class="fas fa-exclamation-circle"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Lütfen zorunlu alanları doldurun!&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Form Section (Public) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="formSection" class="grid grid-cols-1 lg:grid-cols-3 gap-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Form Section --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="lg:col-span-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center justify-between mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h2 class="text-xl font-semibold text-gray-900 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-user text-turquoise-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>İhtiyaç Bildirim Formu</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-clock text-gray-400"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;form id="needsForm" class="space-y-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Personal Information --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Ad Soyad *</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>type="text"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>name="name"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>id="name"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="Adınızı ve soyadınızı girin"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>required</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Telefon *</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>type="tel"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>name="phone"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>id="phone"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="555 123 45 67"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>required</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Adres</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>type="text"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>name="address"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>id="address"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="Tam adresinizi girin"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>Mahalle</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>type="text"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>name="district"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>id="district"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>placeholder="Mahallenizi girin"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Needs Selection --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-medium text-gray-700 mb-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>İhtiyaç Türleri *</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="needsContainer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="food"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-red-100 text-red-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-utensils text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Gıda&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="health"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-green-100 text-green-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-heartbeat text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Sağlık&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="education"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-blue-100 text-blue-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-graduation-cap text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Eğitim&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="housing"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-purple-100 text-purple-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-home text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Barınma&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="employment"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-yellow-100 text-yellow-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-briefcase text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;İstihdam&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="legal"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-indigo-100 text-indigo-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-balance-scale text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Hukuk&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="checkbox"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="needs"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="other"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 text-gray-600"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;i class="fas fa-building text-sm"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>&lt;span class="text-sm font-medium"&gt;Diğer&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="otherNeedContainer" class="hidden"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>Diğer İhtiyaç</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>type="text"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>name="otherNeed"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>id="otherNeed"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>placeholder="Diğer ihtiyaçlarınızı belirtin"</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Urgency --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-medium text-gray-700 mb-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>Aciliyet Durumu</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="flex space-x-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="radio"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="urgency"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="normal"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>checked</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>Normal</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="radio"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="urgency"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="high"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>Yüksek</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;label class="flex items-center space-x-2 cursor-pointer"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;input</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>type="radio"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>name="urgency"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>value="urgent"</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>class="text-turquoise-600 focus:ring-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>/&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;span class="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                        </span>Acil</p>
-<p class="p1"><span class="Apple-converted-space">                                    </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;!-- Description --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="block text-sm font-medium text-gray-700 mb-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>Detaylı Açıklama</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;textarea</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>name="description"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>id="description"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>rows="4"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>placeholder="İhtiyaçlarınızı detaylı bir şekilde açıklayın..."</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&gt;&lt;/textarea&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>type="submit"</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full bg-turquoise-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-turquoise-700 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2 transition-colors duration-200"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>İhtiyacı Bildir</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/form&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Stats and Export Section (Admin Only) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="space-y-6 admin-only"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Stats Card --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-gray-900 mb-4"&gt;İstatistikler&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="space-y-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex justify-between items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-gray-600"&gt;Toplam Başvuru&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="totalSubmissions" class="font-bold text-turquoise-600"&gt;0&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex justify-between items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-gray-600"&gt;Bugünkü Başvurular&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="todaySubmissions" class="font-bold text-green-600"&gt;0&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex justify-between items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-gray-600"&gt;Acil Durumlar&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span id="urgentSubmissions" class="font-bold text-red-600"&gt;0&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Export Button --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-gray-900 mb-4"&gt;Veri Yönetimi&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>id="exportBtn"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>disabled</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-download"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span&gt;Excel Olarak İndir&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Tüm verileri tek tuşla indirin</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Instructions --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="bg-turquoise-50 rounded-xl p-6 border border-turquoise-200"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-turquoise-900 mb-3"&gt;Nasıl Kullanılır?&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="space-y-2 text-sm text-turquoise-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-start space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-turquoise-600 font-bold"&gt;1.&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;İhtiyaçlarınızı formdan bildirin&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-start space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-turquoise-600 font-bold"&gt;2.&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Koordinatör ekibi başvurunuzu değerlendirecek&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li class="flex items-start space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-turquoise-600 font-bold"&gt;3.&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Gün sonu tüm verileri Excel olarak indirin&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/li&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Submissions Section (Admin Only) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="submissionsSection" class="hidden admin-only"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flex items-center justify-between mb-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h2 class="text-xl font-semibold text-gray-900 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-file-alt text-turquoise-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Tüm Başvurular</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-center space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm text-gray-600"&gt;Toplam: &lt;span id="submissionsCount" class="font-bold"&gt;0&lt;/span&gt;&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button id="refreshSubmissions" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-sync-alt text-gray-600"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="submissionsList" class="space-y-4 max-h-96 overflow-y-auto"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Submissions will be populated here --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="noSubmissions" class="text-center py-8 text-gray-500"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-inbox text-4xl mb-4 text-gray-300"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p&gt;Henüz hiçbir başvuru bulunmamaktadır.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Stats Section (Admin Only) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="statsSection" class="hidden admin-only"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-gray-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-chart-bar text-turquoise-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Detaylı İstatistikler</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h2&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border border-gray-200 rounded-lg p-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-medium text-gray-900 mb-2"&gt;İhtiyaç Dağılımı&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="needsDistribution" class="space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Will be populated dynamically --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border border-gray-200 rounded-lg p-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-medium text-gray-900 mb-2"&gt;Aciliyet Dağılımı&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="urgencyDistribution" class="space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Will be populated dynamically --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border border-gray-200 rounded-lg p-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-medium text-gray-900 mb-2"&gt;Günlük Başvurular&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div id="dailySubmissions" class="space-y-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;!-- Will be populated dynamically --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Data Management Section (Admin Only) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="managementSection" class="hidden admin-only"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white rounded-xl shadow-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-gray-900 mb-6 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;i class="fas fa-database text-turquoise-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>Veri Yönetimi</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/h2&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border border-gray-200 rounded-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-medium text-gray-900 mb-4 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-download text-green-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Veri İndirme</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>id="exportBtnManagement"</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2"</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>disabled</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-file-excel"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Tüm Verileri İndir (.CSV)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Tüm başvuru verilerini Excel formatında indirin</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                    </span></p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="border border-gray-200 rounded-lg p-6"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;h3 class="font-medium text-gray-900 mb-4 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-trash-alt text-red-600 mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Veri Temizleme</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;button</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>id="clearDataBtn"</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>class="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors duration-200 flex items-center justify-center space-x-2"</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fas fa-eraser"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span&gt;Tüm Verileri Sil&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;p class="text-xs text-gray-500 mt-2 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>Tüm başvuru kayıtlarını kalıcı olarak siler</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="font-medium text-yellow-800 mb-2 flex items-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fas fa-exclamation-triangle mr-2"&gt;&lt;/i&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Dikkat!</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h4&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-yellow-700"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>Veri temizleme işlemi geri alınamaz. Lütfen verileri indirdikten sonra temizleme işlemi yapın.</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-gray-800 text-white py-8 mt-12"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-300"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>© &lt;span id="currentYear"&gt;&lt;/span&gt; Ataşehir Valilik Roman Koordinatörlüğü -<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>Dezavantajlı Roman Halkı Destek Platformu</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-gray-400 mt-2 text-sm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Tüm hakları saklıdır. Bu platform, yardım ihtiyaçlarını daha etkin yönetmek için oluşturulmuştur.</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Set current year</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('currentYear').textContent = new Date().getFullYear();</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Fixed admin password</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const ADMIN_PASSWORD = "2025Bjk2025.,.";</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Theme toggle functionality</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const themeToggle = document.getElementById('themeToggle');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const body = document.body;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Check for saved theme preference or respect OS preference</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const savedTheme = localStorage.getItem('theme');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (savedTheme === 'dark' || (!savedTheme &amp;&amp; prefersDark)) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>body.classList.add('dark-mode');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>themeToggle.innerHTML = '&lt;i class="fas fa-sun text-yellow-400"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>themeToggle.innerHTML = '&lt;i class="fas fa-moon text-gray-600"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>themeToggle.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>body.classList.toggle('dark-mode');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (body.classList.contains('dark-mode')) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>localStorage.setItem('theme', 'dark');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>themeToggle.innerHTML = '&lt;i class="fas fa-sun text-yellow-400"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>localStorage.setItem('theme', 'light');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>themeToggle.innerHTML = '&lt;i class="fas fa-moon text-gray-600"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Admin login functionality</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const adminLoginBtn = document.getElementById('adminLoginBtn');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const adminLoginModal = document.getElementById('adminLoginModal');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const closeLoginModal = document.getElementById('closeLoginModal');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const adminLoginForm = document.getElementById('adminLoginForm');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const adminPasswordInput = document.getElementById('adminPassword');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>adminLoginBtn.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminLoginModal.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>closeLoginModal.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminLoginModal.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminPasswordInput.value = '';</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Login with fixed password</p>
-<p class="p1"><span class="Apple-converted-space">        </span>adminLoginForm.addEventListener('submit', (e) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const password = adminPasswordInput.value;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (password === ADMIN_PASSWORD) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Show admin sections</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.admin-only').forEach(el =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.add('admin-visible');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Show admin navigation tabs</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.querySelectorAll('.nav-link[data-tab="submissions"], .nav-link[data-tab="stats"], .nav-link[data-tab="management"]').forEach(el =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>adminLoginModal.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>adminPasswordInput.value = '';</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Show logout option</p>
-<p class="p1"><span class="Apple-converted-space">                </span>adminLoginBtn.innerHTML = '&lt;i class="fas fa-sign-out-alt text-red-600"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>adminLoginBtn.title = 'Çıkış Yap';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>adminLoginBtn.onclick = logoutAdmin;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Load admin data</p>
-<p class="p1"><span class="Apple-converted-space">                </span>loadSubmissionsList();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>updateStats();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>updateDetailedStats();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>alert('Geçersiz şifre!');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function logoutAdmin() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Hide admin sections</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.admin-only').forEach(el =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>el.classList.remove('admin-visible');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Hide admin navigation tabs</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.nav-link[data-tab="submissions"], .nav-link[data-tab="stats"], .nav-link[data-tab="management"]').forEach(el =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>el.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Reset navigation to form tab</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.nav-link').forEach(el =&gt; el.classList.remove('active', 'border-turquoise-500', 'text-turquoise-600'));</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.querySelector('.nav-link[data-tab="form"]').classList.add('active', 'border-turquoise-500', 'text-turquoise-600');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('formSection').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('submissionsSection').classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('statsSection').classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('managementSection').classList.add('hidden');</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Reset admin button</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminLoginBtn.innerHTML = '&lt;i class="fas fa-lock text-turquoise-600"&gt;&lt;/i&gt;';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminLoginBtn.title = 'Yönetici Girişi';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>adminLoginBtn.onclick = () =&gt; adminLoginModal.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Navigation tabs</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const navLinks = document.querySelectorAll('.nav-link');</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>navLinks.forEach(link =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>navLinks.forEach(l =&gt; l.classList.remove('active', 'border-turquoise-500', 'text-turquoise-600'));</p>
-<p class="p1"><span class="Apple-converted-space">                </span>link.classList.add('active', 'border-turquoise-500', 'text-turquoise-600');</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Hide all sections</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('formSection').classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('submissionsSection').classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('statsSection').classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('managementSection').classList.add('hidden');</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// Show selected section</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (link.dataset.tab === 'form') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('formSection').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else if (link.dataset.tab === 'submissions') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('submissionsSection').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>loadSubmissionsList();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else if (link.dataset.tab === 'stats') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('statsSection').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>updateDetailedStats();</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else if (link.dataset.tab === 'management') {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>document.getElementById('managementSection').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>updateStats(); // Update export button state</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Load submissions from localStorage</p>
-<p class="p1"><span class="Apple-converted-space">        </span>let submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Update stats</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function updateStats() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('totalSubmissions').textContent = submissions.length;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('submissionsCount').textContent = submissions.length;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const today = new Date().toDateString();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const todayCount = submissions.filter(sub =&gt; new Date(sub.timestamp).toDateString() === today).length;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('todaySubmissions').textContent = todayCount;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgentCount = submissions.filter(sub =&gt; sub.urgency === 'urgent').length;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('urgentSubmissions').textContent = urgentCount;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update export buttons</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const exportBtn = document.getElementById('exportBtn');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const exportBtnManagement = document.getElementById('exportBtnManagement');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const isDisabled = submissions.length === 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>exportBtn.disabled = isDisabled;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>exportBtnManagement.disabled = isDisabled;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('noSubmissions').classList.toggle('hidden', submissions.length &gt; 0);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Handle form submission</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('needsForm').addEventListener('submit', function(e) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const name = document.getElementById('name').value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const phone = document.getElementById('phone').value.trim();</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (!name || !phone) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('errorMessage').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>setTimeout(() =&gt; document.getElementById('errorMessage').classList.add('hidden'), 3000);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Get selected needs</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const needsCheckboxes = document.querySelectorAll('input[name="needs"]:checked');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const needs = {};</p>
-<p class="p1"><span class="Apple-converted-space">            </span>needsCheckboxes.forEach(checkbox =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>needs[checkbox.value] = true;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Get other need if applicable</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const otherNeed = needs.other ? document.getElementById('otherNeed').value.trim() : '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Get urgency</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgency = document.querySelector('input[name="urgency"]:checked').value;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Get description</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const description = document.getElementById('description').value.trim();</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Get address and district</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const address = document.getElementById('address').value.trim();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const district = document.getElementById('district').value.trim();</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const newSubmission = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>id: Date.now(),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>name: name,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>phone: phone,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>address: address,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>district: district,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>needs: needs,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>otherNeed: otherNeed,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>urgency: urgency,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>description: description,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>timestamp: new Date().toLocaleString('tr-TR')</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissions.push(newSubmission);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>localStorage.setItem('romanSubmissions', JSON.stringify(submissions));</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Reset form</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('needsForm').reset();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('otherNeedContainer').classList.add('hidden');</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Show success message</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('successMessage').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>setTimeout(() =&gt; document.getElementById('successMessage').classList.add('hidden'), 3000);</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Update stats if admin is logged in</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (document.querySelector('.admin-only.admin-visible')) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>updateStats();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Handle "Diğer" checkbox</p>
-<p class="p1"><span class="Apple-converted-space">        </span>const otherCheckbox = document.querySelector('input[value="other"]');</p>
-<p class="p1"><span class="Apple-converted-space">        </span>if (otherCheckbox) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>otherCheckbox.addEventListener('change', function() {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const otherNeedContainer = document.getElementById('otherNeedContainer');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (this.checked) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>otherNeedContainer.classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>otherNeedContainer.classList.add('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Export to CSV (main section)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('exportBtn').addEventListener('click', exportToCSV);</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Export to CSV (management section)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('exportBtnManagement').addEventListener('click', exportToCSV);</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>function exportToCSV() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (submissions.length === 0) return;</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const headers = [</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Ad Soyad',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Telefon',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Adres',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Mahalle',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Gıda',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Sağlık',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Eğitim',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Barınma',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'İstihdam',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Hukuk',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Diğer',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Diğer İhtiyaç',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Aciliyet',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Açıklama',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>'Tarih'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>];</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const csvContent = [</p>
-<p class="p1"><span class="Apple-converted-space">                </span>headers.join(','),</p>
-<p class="p1"><span class="Apple-converted-space">                </span>...submissions.map(sub =&gt; [</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.name}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.phone}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.address}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.district}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.food ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.health ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.education ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.housing ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.employment ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.legal ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.needs.other ? 'Evet' : 'Hayır',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.otherNeed || ''}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>sub.urgency === 'urgent' ? 'Acil' : sub.urgency === 'high' ? 'Yüksek' : 'Normal',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.description}"`,</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`"${sub.timestamp}"`</p>
-<p class="p1"><span class="Apple-converted-space">                </span>].join(','))</p>
-<p class="p1"><span class="Apple-converted-space">            </span>].join('\n');</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const url = URL.createObjectURL(blob);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const link = document.createElement('a');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.setAttribute('href', url);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.setAttribute('download', `roman_ihtiyaclari_${new Date().toISOString().split('T')[0]}.csv`);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.style.visibility = 'hidden';</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.body.appendChild(link);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>link.click();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.body.removeChild(link);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Clear all data</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('clearDataBtn').addEventListener('click', function() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (confirm('Tüm verileri silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!')) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (confirm('Son kez onaylıyor musunuz? Tüm başvuru kayıtları kalıcı olarak silinecek!')) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>localStorage.removeItem('romanSubmissions');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>submissions = [];</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>updateStats();</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>loadSubmissionsList();</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>updateDetailedStats();</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>alert('Tüm veriler başarıyla silindi!');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Load submissions list</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function loadSubmissionsList() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const submissionsList = document.getElementById('submissionsList');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissionsList.innerHTML = '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (submissions.length === 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById('noSubmissions').classList.remove('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById('noSubmissions').classList.add('hidden');</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Sort by timestamp (newest first)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const sortedSubmissions = [...submissions].sort((a, b) =&gt; new Date(b.timestamp) - new Date(a.timestamp));</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>sortedSubmissions.forEach(sub =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const urgencyColors = {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>normal: 'bg-green-100 text-green-800',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>high: 'bg-yellow-100 text-yellow-800',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>urgent: 'bg-red-100 text-red-800'</p>
-<p class="p1"><span class="Apple-converted-space">                </span>};</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>const urgencyLabels = {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>normal: 'Normal',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>high: 'Yüksek',</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>urgent: 'Acil'</p>
-<p class="p1"><span class="Apple-converted-space">                </span>};</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>const needsList = [];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.food) needsList.push('Gıda');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.health) needsList.push('Sağlık');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.education) needsList.push('Eğitim');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.housing) needsList.push('Barınma');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.employment) needsList.push('İstihdam');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.legal) needsList.push('Hukuk');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (sub.needs.other) needsList.push('Diğer');</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>const submissionElement = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>submissionElement.className = 'border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>submissionElement.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex justify-between items-start mb-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h3 class="font-semibold text-gray-900"&gt;${sub.name}&lt;/h3&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-600"&gt;${sub.phone}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="px-2 py-1 rounded-full text-xs font-medium ${urgencyColors[sub.urgency]}"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>${urgencyLabels[sub.urgency]}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-600"&gt;&lt;i class="fas fa-map-marker-alt mr-2"&gt;&lt;/i&gt;${sub.address || 'Adres belirtilmemiş'}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-600"&gt;&lt;i class="fas fa-city mr-2"&gt;&lt;/i&gt;${sub.district || 'Mahalle belirtilmemiş'}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-600"&gt;&lt;i class="fas fa-list mr-2"&gt;&lt;/i&gt;${needsList.join(', ')}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>${sub.otherNeed ? `&lt;p class="text-sm text-gray-600"&gt;&lt;i class="fas fa-plus mr-2"&gt;&lt;/i&gt;${sub.otherNeed}&lt;/p&gt;` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>${sub.description ? `&lt;p class="text-sm text-gray-700 mb-2"&gt;${sub.description}&lt;/p&gt;` : ''}</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-500"&gt;&lt;i class="fas fa-clock mr-2"&gt;&lt;/i&gt;${sub.timestamp}&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>submissionsList.appendChild(submissionElement);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Update detailed statistics</p>
-<p class="p1"><span class="Apple-converted-space">        </span>function updateDetailedStats() {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Needs distribution</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const needsDistribution = document.getElementById('needsDistribution');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>needsDistribution.innerHTML = '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const needsCount = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>food: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>health: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>education: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>housing: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>employment: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>legal: 0,</p>
-<p class="p1"><span class="Apple-converted-space">                </span>other: 0</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissions.forEach(sub =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>Object.keys(needsCount).forEach(need =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>if (sub.needs[need]) {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>needsCount[need]++;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">                </span>});</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const needsLabels = {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>food: 'Gıda',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>health: 'Sağlık',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>education: 'Eğitim',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>housing: 'Barınma',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>employment: 'İstihdam',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>legal: 'Hukuk',</p>
-<p class="p1"><span class="Apple-converted-space">                </span>other: 'Diğer'</p>
-<p class="p1"><span class="Apple-converted-space">            </span>};</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>Object.entries(needsCount).forEach(([key, count]) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (count &gt; 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const percentage = submissions.length &gt; 0 ? Math.round((count / submissions.length) * 100) : 0;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const barElement = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>barElement.className = 'flex items-center justify-between';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>barElement.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-medium"&gt;${needsLabels[key]}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-24 bg-gray-200 rounded-full h-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="bg-turquoise-600 h-2 rounded-full" style="width: ${percentage}%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-sm text-gray-600"&gt;${count} (${percentage}%)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>needsDistribution.appendChild(barElement);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Urgency distribution</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgencyDistribution = document.getElementById('urgencyDistribution');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>urgencyDistribution.innerHTML = '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgencyCount = { normal: 0, high: 0, urgent: 0 };</p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissions.forEach(sub =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>urgencyCount[sub.urgency]++;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgencyLabels = { normal: 'Normal', high: 'Yüksek', urgent: 'Acil' };</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const urgencyColors = { normal: 'bg-green-500', high: 'bg-yellow-500', urgent: 'bg-red-500' };</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>Object.entries(urgencyCount).forEach(([key, count]) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (count &gt; 0) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const percentage = submissions.length &gt; 0 ? Math.round((count / submissions.length) * 100) : 0;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>const barElement = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>barElement.className = 'flex items-center justify-between';</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>barElement.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;span class="text-sm font-medium"&gt;${urgencyLabels[key]}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="flex items-center space-x-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="w-24 bg-gray-200 rounded-full h-2"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                                </span>&lt;div class="${urgencyColors[key]} h-2 rounded-full" style="width: ${percentage}%"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                            </span>&lt;span class="text-sm text-gray-600"&gt;${count} (${percentage}%)&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>urgencyDistribution.appendChild(barElement);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Daily submissions (last 7 days)</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const dailySubmissions = document.getElementById('dailySubmissions');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>dailySubmissions.innerHTML = '';</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>const today = new Date();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const dailyCount = {};</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>for (let i = 6; i &gt;= 0; i--) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const date = new Date(today);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>date.setDate(today.getDate() - i);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const dateStr = date.toISOString().split('T')[0];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>dailyCount[dateStr] = 0;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissions.forEach(sub =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const subDate = new Date(sub.timestamp);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const subDateStr = subDate.toISOString().split('T')[0];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>if (dailyCount[subDateStr] !== undefined) {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>dailyCount[subDateStr]++;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>}</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>Object.entries(dailyCount).forEach(([date, count]) =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const dateObj = new Date(date);</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const dayNames = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const dayName = dayNames[dateObj.getDay()];</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const formattedDate = `${dayName} ${date.split('-')[2]}`;</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>const barElement = document.createElement('div');</p>
-<p class="p1"><span class="Apple-converted-space">                </span>barElement.className = 'flex items-center justify-between';</p>
-<p class="p1"><span class="Apple-converted-space">                </span>barElement.innerHTML = `</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-sm font-medium"&gt;${formattedDate}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>&lt;span class="text-sm text-gray-600"&gt;${count}&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>`;</p>
-<p class="p1"><span class="Apple-converted-space">                </span>dailySubmissions.appendChild(barElement);</p>
-<p class="p1"><span class="Apple-converted-space">            </span>});</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Refresh submissions</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('refreshSubmissions').addEventListener('click', () =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];</p>
-<p class="p1"><span class="Apple-converted-space">            </span>updateStats();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>loadSubmissionsList();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (document.getElementById('statsSection').classList.contains('admin-visible')) {</p>
-<p class="p1"><span class="Apple-converted-space">                </span>updateDetailedStats();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Initialize stats on page load</p>
-<p class="p1"><span class="Apple-converted-space">        </span>updateStats();</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Set first tab as active</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.querySelector('.nav-link[data-tab="form"]').classList.add('active', 'border-turquoise-500', 'text-turquoise-600');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
-<p class="p1">```</p>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-lg border-b-4 border-turquoise-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-turquoise-600 p-3 rounded-full">
+                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold text-gray-900">
+                            Ataşehir Valilik Roman Koordinatörlüğü
+                        </h1>
+                        <p class="text-gray-600 mt-1">Dezavantajlı Roman Halkı Destek Sistemi</p>
+                    </div>
+                </div>
+                <div class="mt-4 md:mt-0 flex items-center space-x-4">
+                    <div class="flex flex-col space-y-2">
+                        <div class="flex items-center space-x-2 text-gray-700">
+                            <i class="fas fa-phone text-turquoise-600"></i>
+                            <span class="font-medium">545 774 27 53</span>
+                        </div>
+                        <div class="flex items-center space-x-2 text-gray-700">
+                            <i class="fas fa-envelope text-turquoise-600"></i>
+                            <span class="font-medium">atasehirvalikoordinatoru@gmail.com</span>
+                        </div>
+                    </div>
+                    <button id="themeToggle" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                        <i class="fas fa-moon text-gray-600"></i>
+                    </button>
+                    <button id="adminLoginBtn" class="p-2 rounded-lg bg-turquoise-100 hover:bg-turquoise-200 transition-colors">
+                        <i class="fas fa-lock text-turquoise-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Login Modal -->
+    <div id="adminLoginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-xl p-6 w-full max-w-md mx-4">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold text-gray-900">Yönetici Girişi</h3>
+                <button id="closeLoginModal" class="text-gray-400 hover:text-gray-600">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form id="adminLoginForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Şifre</label>
+                    <input
+                        type="password"
+                        id="adminPassword"
+                        class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                        placeholder="Yönetici şifresini girin"
+                        required
+                    />
+                </div>
+                <button
+                    type="submit"
+                    class="w-full bg-turquoise-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-turquoise-700 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2 transition-colors duration-200"
+                >
+                    Giriş Yap
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex space-x-8">
+                <button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium" data-tab="form">
+                    İhtiyaç Bildirimi
+                </button>
+                <button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="submissions">
+                    Başvurular
+                </button>
+                <button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="stats">
+                    İstatistikler
+                </button>
+                <button class="nav-link py-4 px-2 border-b-2 border-transparent text-gray-700 hover:border-turquoise-500 hover:text-turquoise-600 font-medium admin-only" data-tab="management">
+                    Veri Yönetimi
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Success/Error Messages -->
+        <div id="successMessage" class="fixed-notification bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hidden">
+            <i class="fas fa-check-circle"></i>
+            <span>Başvurunuz başarıyla kaydedildi!</span>
+        </div>
+        <div id="errorMessage" class="fixed-notification bg-red-500 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-2 hidden">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Lütfen zorunlu alanları doldurun!</span>
+        </div>
+
+        <!-- Form Section (Public) -->
+        <div id="formSection" class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Form Section -->
+            <div class="lg:col-span-2">
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-semibold text-gray-900 flex items-center">
+                            <i class="fas fa-user text-turquoise-600 mr-2"></i>
+                            İhtiyaç Bildirim Formu
+                        </h2>
+                        <i class="fas fa-clock text-gray-400"></i>
+                    </div>
+
+                    <form id="needsForm" class="space-y-6">
+                        <!-- Personal Information -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Ad Soyad *
+                                </label>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    id="name"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                    placeholder="Adınızı ve soyadınızı girin"
+                                    required
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Telefon *
+                                </label>
+                                <input
+                                    type="tel"
+                                    name="phone"
+                                    id="phone"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                    placeholder="555 123 45 67"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Adres
+                                </label>
+                                <input
+                                    type="text"
+                                    name="address"
+                                    id="address"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                    placeholder="Tam adresinizi girin"
+                                />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    Mahalle
+                                </label>
+                                <input
+                                    type="text"
+                                    name="district"
+                                    id="district"
+                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                    placeholder="Mahallenizi girin"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Needs Selection -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">
+                                İhtiyaç Türleri *
+                            </label>
+                            <div class="grid grid-cols-2 md:grid-cols-3 gap-3" id="needsContainer">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="food"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-red-100 text-red-600">
+                                        <i class="fas fa-utensils text-sm"></i>
+                                        <span class="text-sm font-medium">Gıda</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="health"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-green-100 text-green-600">
+                                        <i class="fas fa-heartbeat text-sm"></i>
+                                        <span class="text-sm font-medium">Sağlık</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="education"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-blue-100 text-blue-600">
+                                        <i class="fas fa-graduation-cap text-sm"></i>
+                                        <span class="text-sm font-medium">Eğitim</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="housing"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-purple-100 text-purple-600">
+                                        <i class="fas fa-home text-sm"></i>
+                                        <span class="text-sm font-medium">Barınma</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="employment"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-yellow-100 text-yellow-600">
+                                        <i class="fas fa-briefcase text-sm"></i>
+                                        <span class="text-sm font-medium">İstihdam</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="legal"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-indigo-100 text-indigo-600">
+                                        <i class="fas fa-balance-scale text-sm"></i>
+                                        <span class="text-sm font-medium">Hukuk</span>
+                                    </div>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="checkbox"
+                                        name="needs"
+                                        value="other"
+                                        class="rounded border-gray-300 text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <div class="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 text-gray-600">
+                                        <i class="fas fa-building text-sm"></i>
+                                        <span class="text-sm font-medium">Diğer</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div id="otherNeedContainer" class="hidden">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Diğer İhtiyaç
+                            </label>
+                            <input
+                                type="text"
+                                name="otherNeed"
+                                id="otherNeed"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                placeholder="Diğer ihtiyaçlarınızı belirtin"
+                            />
+                        </div>
+
+                        <!-- Urgency -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-3">
+                                Aciliyet Durumu
+                            </label>
+                            <div class="flex space-x-3">
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="urgency"
+                                        value="normal"
+                                        class="text-turquoise-600 focus:ring-turquoise-500"
+                                        checked
+                                    />
+                                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                        Normal
+                                    </span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="urgency"
+                                        value="high"
+                                        class="text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                                        Yüksek
+                                    </span>
+                                </label>
+                                <label class="flex items-center space-x-2 cursor-pointer">
+                                    <input
+                                        type="radio"
+                                        name="urgency"
+                                        value="urgent"
+                                        class="text-turquoise-600 focus:ring-turquoise-500"
+                                    />
+                                    <span class="px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800">
+                                        Acil
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Description -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">
+                                Detaylı Açıklama
+                            </label>
+                            <textarea
+                                name="description"
+                                id="description"
+                                rows="4"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-turquoise-500 focus:border-turquoise-500"
+                                placeholder="İhtiyaçlarınızı detaylı bir şekilde açıklayın..."
+                            ></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="w-full bg-turquoise-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-turquoise-700 focus:outline-none focus:ring-2 focus:ring-turquoise-500 focus:ring-offset-2 transition-colors duration-200"
+                        >
+                            İhtiyacı Bildir
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Stats and Export Section (Admin Only) -->
+            <div class="space-y-6 admin-only">
+                <!-- Stats Card -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">İstatistikler</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Toplam Başvuru</span>
+                            <span id="totalSubmissions" class="font-bold text-turquoise-600">0</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Bugünkü Başvurular</span>
+                            <span id="todaySubmissions" class="font-bold text-green-600">0</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Acil Durumlar</span>
+                            <span id="urgentSubmissions" class="font-bold text-red-600">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Button -->
+                <div class="bg-white rounded-xl shadow-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Veri Yönetimi</h3>
+                    <button
+                        id="exportBtn"
+                        class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                        disabled
+                    >
+                        <i class="fas fa-download"></i>
+                        <span>Excel Olarak İndir</span>
+                    </button>
+                    <p class="text-xs text-gray-500 mt-2 text-center">
+                        Tüm verileri tek tuşla indirin
+                    </p>
+                </div>
+
+                <!-- Instructions -->
+                <div class="bg-turquoise-50 rounded-xl p-6 border border-turquoise-200">
+                    <h3 class="text-lg font-semibold text-turquoise-900 mb-3">Nasıl Kullanılır?</h3>
+                    <ul class="space-y-2 text-sm text-turquoise-700">
+                        <li class="flex items-start space-x-2">
+                            <span class="text-turquoise-600 font-bold">1.</span>
+                            <span>İhtiyaçlarınızı formdan bildirin</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-turquoise-600 font-bold">2.</span>
+                            <span>Koordinatör ekibi başvurunuzu değerlendirecek</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <span class="text-turquoise-600 font-bold">3.</span>
+                            <span>Gün sonu tüm verileri Excel olarak indirin</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submissions Section (Admin Only) -->
+        <div id="submissionsSection" class="hidden admin-only">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-xl font-semibold text-gray-900 flex items-center">
+                        <i class="fas fa-file-alt text-turquoise-600 mr-2"></i>
+                        Tüm Başvurular
+                    </h2>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-gray-600">Toplam: <span id="submissionsCount" class="font-bold">0</span></span>
+                        <button id="refreshSubmissions" class="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors">
+                            <i class="fas fa-sync-alt text-gray-600"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="submissionsList" class="space-y-4 max-h-96 overflow-y-auto">
+                    <!-- Submissions will be populated here -->
+                </div>
+                
+                <div id="noSubmissions" class="text-center py-8 text-gray-500">
+                    <i class="fas fa-inbox text-4xl mb-4 text-gray-300"></i>
+                    <p>Henüz hiçbir başvuru bulunmamaktadır.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section (Admin Only) -->
+        <div id="statsSection" class="hidden admin-only">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-chart-bar text-turquoise-600 mr-2"></i>
+                    Detaylı İstatistikler
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h3 class="font-medium text-gray-900 mb-2">İhtiyaç Dağılımı</h3>
+                        <div id="needsDistribution" class="space-y-2">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h3 class="font-medium text-gray-900 mb-2">Aciliyet Dağılımı</h3>
+                        <div id="urgencyDistribution" class="space-y-2">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-4">
+                        <h3 class="font-medium text-gray-900 mb-2">Günlük Başvurular</h3>
+                        <div id="dailySubmissions" class="space-y-2">
+                            <!-- Will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Management Section (Admin Only) -->
+        <div id="managementSection" class="hidden admin-only">
+            <div class="bg-white rounded-xl shadow-lg p-6">
+                <h2 class="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-database text-turquoise-600 mr-2"></i>
+                    Veri Yönetimi
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="font-medium text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-download text-green-600 mr-2"></i>
+                            Veri İndirme
+                        </h3>
+                        <button
+                            id="exportBtnManagement"
+                            class="w-full bg-green-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                            disabled
+                        >
+                            <i class="fas fa-file-excel"></i>
+                            <span>Tüm Verileri İndir (.CSV)</span>
+                        </button>
+                        <p class="text-xs text-gray-500 mt-2 text-center">
+                            Tüm başvuru verilerini Excel formatında indirin
+                        </p>
+                    </div>
+                    
+                    <div class="border border-gray-200 rounded-lg p-6">
+                        <h3 class="font-medium text-gray-900 mb-4 flex items-center">
+                            <i class="fas fa-trash-alt text-red-600 mr-2"></i>
+                            Veri Temizleme
+                        </h3>
+                        <button
+                            id="clearDataBtn"
+                            class="w-full bg-red-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors duration-200 flex items-center justify-center space-x-2"
+                        >
+                            <i class="fas fa-eraser"></i>
+                            <span>Tüm Verileri Sil</span>
+                        </button>
+                        <p class="text-xs text-gray-500 mt-2 text-center">
+                            Tüm başvuru kayıtlarını kalıcı olarak siler
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                    <h4 class="font-medium text-yellow-800 mb-2 flex items-center">
+                        <i class="fas fa-exclamation-triangle mr-2"></i>
+                        Dikkat!
+                    </h4>
+                    <p class="text-sm text-yellow-700">
+                        Veri temizleme işlemi geri alınamaz. Lütfen verileri indirdikten sonra temizleme işlemi yapın.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-300">
+                © <span id="currentYear"></span> Ataşehir Valilik Roman Koordinatörlüğü - 
+                Dezavantajlı Roman Halkı Destek Platformu
+            </p>
+            <p class="text-gray-400 mt-2 text-sm">
+                Tüm hakları saklıdır. Bu platform, yardım ihtiyaçlarını daha etkin yönetmek için oluşturulmuştur.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Fixed admin password
+        const ADMIN_PASSWORD = "2025Bjk2025.,.";
+        
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        // Check for saved theme preference or respect OS preference
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+            body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun text-yellow-400"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon text-gray-600"></i>';
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-sun text-yellow-400"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-moon text-gray-600"></i>';
+            }
+        });
+
+        // Admin login functionality
+        const adminLoginBtn = document.getElementById('adminLoginBtn');
+        const adminLoginModal = document.getElementById('adminLoginModal');
+        const closeLoginModal = document.getElementById('closeLoginModal');
+        const adminLoginForm = document.getElementById('adminLoginForm');
+        const adminPasswordInput = document.getElementById('adminPassword');
+        
+        adminLoginBtn.addEventListener('click', () => {
+            adminLoginModal.classList.remove('hidden');
+        });
+        
+        closeLoginModal.addEventListener('click', () => {
+            adminLoginModal.classList.add('hidden');
+            adminPasswordInput.value = '';
+        });
+        
+        // Login with fixed password
+        adminLoginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const password = adminPasswordInput.value;
+            
+            if (password === ADMIN_PASSWORD) {
+                // Show admin sections
+                document.querySelectorAll('.admin-only').forEach(el => {
+                    el.classList.add('admin-visible');
+                });
+                
+                // Show admin navigation tabs
+                document.querySelectorAll('.nav-link[data-tab="submissions"], .nav-link[data-tab="stats"], .nav-link[data-tab="management"]').forEach(el => {
+                    el.classList.remove('hidden');
+                });
+                
+                adminLoginModal.classList.add('hidden');
+                adminPasswordInput.value = '';
+                
+                // Show logout option
+                adminLoginBtn.innerHTML = '<i class="fas fa-sign-out-alt text-red-600"></i>';
+                adminLoginBtn.title = 'Çıkış Yap';
+                adminLoginBtn.onclick = logoutAdmin;
+                
+                // Load admin data
+                loadSubmissionsList();
+                updateStats();
+                updateDetailedStats();
+            } else {
+                alert('Geçersiz şifre!');
+            }
+        });
+        
+        function logoutAdmin() {
+            // Hide admin sections
+            document.querySelectorAll('.admin-only').forEach(el => {
+                el.classList.remove('admin-visible');
+            });
+            
+            // Hide admin navigation tabs
+            document.querySelectorAll('.nav-link[data-tab="submissions"], .nav-link[data-tab="stats"], .nav-link[data-tab="management"]').forEach(el => {
+                el.classList.add('hidden');
+            });
+            
+            // Reset navigation to form tab
+            document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active', 'border-turquoise-500', 'text-turquoise-600'));
+            document.querySelector('.nav-link[data-tab="form"]').classList.add('active', 'border-turquoise-500', 'text-turquoise-600');
+            document.getElementById('formSection').classList.remove('hidden');
+            document.getElementById('submissionsSection').classList.add('hidden');
+            document.getElementById('statsSection').classList.add('hidden');
+            document.getElementById('managementSection').classList.add('hidden');
+            
+            // Reset admin button
+            adminLoginBtn.innerHTML = '<i class="fas fa-lock text-turquoise-600"></i>';
+            adminLoginBtn.title = 'Yönetici Girişi';
+            adminLoginBtn.onclick = () => adminLoginModal.classList.remove('hidden');
+        }
+
+        // Navigation tabs
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.forEach(l => l.classList.remove('active', 'border-turquoise-500', 'text-turquoise-600'));
+                link.classList.add('active', 'border-turquoise-500', 'text-turquoise-600');
+                
+                // Hide all sections
+                document.getElementById('formSection').classList.add('hidden');
+                document.getElementById('submissionsSection').classList.add('hidden');
+                document.getElementById('statsSection').classList.add('hidden');
+                document.getElementById('managementSection').classList.add('hidden');
+                
+                // Show selected section
+                if (link.dataset.tab === 'form') {
+                    document.getElementById('formSection').classList.remove('hidden');
+                } else if (link.dataset.tab === 'submissions') {
+                    document.getElementById('submissionsSection').classList.remove('hidden');
+                    loadSubmissionsList();
+                } else if (link.dataset.tab === 'stats') {
+                    document.getElementById('statsSection').classList.remove('hidden');
+                    updateDetailedStats();
+                } else if (link.dataset.tab === 'management') {
+                    document.getElementById('managementSection').classList.remove('hidden');
+                    updateStats(); // Update export button state
+                }
+            });
+        });
+
+        // Load submissions from localStorage
+        let submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];
+        
+        // Update stats
+        function updateStats() {
+            document.getElementById('totalSubmissions').textContent = submissions.length;
+            document.getElementById('submissionsCount').textContent = submissions.length;
+            
+            const today = new Date().toDateString();
+            const todayCount = submissions.filter(sub => new Date(sub.timestamp).toDateString() === today).length;
+            document.getElementById('todaySubmissions').textContent = todayCount;
+            
+            const urgentCount = submissions.filter(sub => sub.urgency === 'urgent').length;
+            document.getElementById('urgentSubmissions').textContent = urgentCount;
+            
+            // Update export buttons
+            const exportBtn = document.getElementById('exportBtn');
+            const exportBtnManagement = document.getElementById('exportBtnManagement');
+            const isDisabled = submissions.length === 0;
+            exportBtn.disabled = isDisabled;
+            exportBtnManagement.disabled = isDisabled;
+            
+            document.getElementById('noSubmissions').classList.toggle('hidden', submissions.length > 0);
+        }
+
+        // Handle form submission
+        document.getElementById('needsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            
+            if (!name || !phone) {
+                document.getElementById('errorMessage').classList.remove('hidden');
+                setTimeout(() => document.getElementById('errorMessage').classList.add('hidden'), 3000);
+                return;
+            }
+            
+            // Get selected needs
+            const needsCheckboxes = document.querySelectorAll('input[name="needs"]:checked');
+            const needs = {};
+            needsCheckboxes.forEach(checkbox => {
+                needs[checkbox.value] = true;
+            });
+            
+            // Get other need if applicable
+            const otherNeed = needs.other ? document.getElementById('otherNeed').value.trim() : '';
+            
+            // Get urgency
+            const urgency = document.querySelector('input[name="urgency"]:checked').value;
+            
+            // Get description
+            const description = document.getElementById('description').value.trim();
+            
+            // Get address and district
+            const address = document.getElementById('address').value.trim();
+            const district = document.getElementById('district').value.trim();
+            
+            const newSubmission = {
+                id: Date.now(),
+                name: name,
+                phone: phone,
+                address: address,
+                district: district,
+                needs: needs,
+                otherNeed: otherNeed,
+                urgency: urgency,
+                description: description,
+                timestamp: new Date().toLocaleString('tr-TR')
+            };
+            
+            submissions.push(newSubmission);
+            localStorage.setItem('romanSubmissions', JSON.stringify(submissions));
+            
+            // Reset form
+            document.getElementById('needsForm').reset();
+            document.getElementById('otherNeedContainer').classList.add('hidden');
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            setTimeout(() => document.getElementById('successMessage').classList.add('hidden'), 3000);
+            
+            // Update stats if admin is logged in
+            if (document.querySelector('.admin-only.admin-visible')) {
+                updateStats();
+            }
+        });
+        
+        // Handle "Diğer" checkbox
+        const otherCheckbox = document.querySelector('input[value="other"]');
+        if (otherCheckbox) {
+            otherCheckbox.addEventListener('change', function() {
+                const otherNeedContainer = document.getElementById('otherNeedContainer');
+                if (this.checked) {
+                    otherNeedContainer.classList.remove('hidden');
+                } else {
+                    otherNeedContainer.classList.add('hidden');
+                }
+            });
+        }
+        
+        // Export to CSV (main section)
+        document.getElementById('exportBtn').addEventListener('click', exportToCSV);
+        
+        // Export to CSV (management section)
+        document.getElementById('exportBtnManagement').addEventListener('click', exportToCSV);
+        
+        function exportToCSV() {
+            if (submissions.length === 0) return;
+            
+            const headers = [
+                'Ad Soyad',
+                'Telefon',
+                'Adres',
+                'Mahalle',
+                'Gıda',
+                'Sağlık',
+                'Eğitim',
+                'Barınma',
+                'İstihdam',
+                'Hukuk',
+                'Diğer',
+                'Diğer İhtiyaç',
+                'Aciliyet',
+                'Açıklama',
+                'Tarih'
+            ];
+            
+            const csvContent = [
+                headers.join(','),
+                ...submissions.map(sub => [
+                    `"${sub.name}"`,
+                    `"${sub.phone}"`,
+                    `"${sub.address}"`,
+                    `"${sub.district}"`,
+                    sub.needs.food ? 'Evet' : 'Hayır',
+                    sub.needs.health ? 'Evet' : 'Hayır',
+                    sub.needs.education ? 'Evet' : 'Hayır',
+                    sub.needs.housing ? 'Evet' : 'Hayır',
+                    sub.needs.employment ? 'Evet' : 'Hayır',
+                    sub.needs.legal ? 'Evet' : 'Hayır',
+                    sub.needs.other ? 'Evet' : 'Hayır',
+                    `"${sub.otherNeed || ''}"`,
+                    sub.urgency === 'urgent' ? 'Acil' : sub.urgency === 'high' ? 'Yüksek' : 'Normal',
+                    `"${sub.description}"`,
+                    `"${sub.timestamp}"`
+                ].join(','))
+            ].join('\n');
+            
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.setAttribute('href', url);
+            link.setAttribute('download', `roman_ihtiyaclari_${new Date().toISOString().split('T')[0]}.csv`);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+        
+        // Clear all data
+        document.getElementById('clearDataBtn').addEventListener('click', function() {
+            if (confirm('Tüm verileri silmek istediğinizden emin misiniz? Bu işlem geri alınamaz!')) {
+                if (confirm('Son kez onaylıyor musunuz? Tüm başvuru kayıtları kalıcı olarak silinecek!')) {
+                    localStorage.removeItem('romanSubmissions');
+                    submissions = [];
+                    updateStats();
+                    loadSubmissionsList();
+                    updateDetailedStats();
+                    alert('Tüm veriler başarıyla silindi!');
+                }
+            }
+        });
+        
+        // Load submissions list
+        function loadSubmissionsList() {
+            const submissionsList = document.getElementById('submissionsList');
+            submissionsList.innerHTML = '';
+            
+            if (submissions.length === 0) {
+                document.getElementById('noSubmissions').classList.remove('hidden');
+                return;
+            }
+            
+            document.getElementById('noSubmissions').classList.add('hidden');
+            
+            // Sort by timestamp (newest first)
+            const sortedSubmissions = [...submissions].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            
+            sortedSubmissions.forEach(sub => {
+                const urgencyColors = {
+                    normal: 'bg-green-100 text-green-800',
+                    high: 'bg-yellow-100 text-yellow-800',
+                    urgent: 'bg-red-100 text-red-800'
+                };
+                
+                const urgencyLabels = {
+                    normal: 'Normal',
+                    high: 'Yüksek',
+                    urgent: 'Acil'
+                };
+                
+                const needsList = [];
+                if (sub.needs.food) needsList.push('Gıda');
+                if (sub.needs.health) needsList.push('Sağlık');
+                if (sub.needs.education) needsList.push('Eğitim');
+                if (sub.needs.housing) needsList.push('Barınma');
+                if (sub.needs.employment) needsList.push('İstihdam');
+                if (sub.needs.legal) needsList.push('Hukuk');
+                if (sub.needs.other) needsList.push('Diğer');
+                
+                const submissionElement = document.createElement('div');
+                submissionElement.className = 'border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow';
+                submissionElement.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h3 class="font-semibold text-gray-900">${sub.name}</h3>
+                            <p class="text-sm text-gray-600">${sub.phone}</p>
+                        </div>
+                        <span class="px-2 py-1 rounded-full text-xs font-medium ${urgencyColors[sub.urgency]}">
+                            ${urgencyLabels[sub.urgency]}
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3">
+                        <div>
+                            <p class="text-sm text-gray-600"><i class="fas fa-map-marker-alt mr-2"></i>${sub.address || 'Adres belirtilmemiş'}</p>
+                            <p class="text-sm text-gray-600"><i class="fas fa-city mr-2"></i>${sub.district || 'Mahalle belirtilmemiş'}</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-600"><i class="fas fa-list mr-2"></i>${needsList.join(', ')}</p>
+                            ${sub.otherNeed ? `<p class="text-sm text-gray-600"><i class="fas fa-plus mr-2"></i>${sub.otherNeed}</p>` : ''}
+                        </div>
+                    </div>
+                    ${sub.description ? `<p class="text-sm text-gray-700 mb-2">${sub.description}</p>` : ''}
+                    <p class="text-xs text-gray-500"><i class="fas fa-clock mr-2"></i>${sub.timestamp}</p>
+                `;
+                
+                submissionsList.appendChild(submissionElement);
+            });
+        }
+        
+        // Update detailed statistics
+        function updateDetailedStats() {
+            // Needs distribution
+            const needsDistribution = document.getElementById('needsDistribution');
+            needsDistribution.innerHTML = '';
+            
+            const needsCount = {
+                food: 0,
+                health: 0,
+                education: 0,
+                housing: 0,
+                employment: 0,
+                legal: 0,
+                other: 0
+            };
+            
+            submissions.forEach(sub => {
+                Object.keys(needsCount).forEach(need => {
+                    if (sub.needs[need]) {
+                        needsCount[need]++;
+                    }
+                });
+            });
+            
+            const needsLabels = {
+                food: 'Gıda',
+                health: 'Sağlık',
+                education: 'Eğitim',
+                housing: 'Barınma',
+                employment: 'İstihdam',
+                legal: 'Hukuk',
+                other: 'Diğer'
+            };
+            
+            Object.entries(needsCount).forEach(([key, count]) => {
+                if (count > 0) {
+                    const percentage = submissions.length > 0 ? Math.round((count / submissions.length) * 100) : 0;
+                    const barElement = document.createElement('div');
+                    barElement.className = 'flex items-center justify-between';
+                    barElement.innerHTML = `
+                        <span class="text-sm font-medium">${needsLabels[key]}</span>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-24 bg-gray-200 rounded-full h-2">
+                                <div class="bg-turquoise-600 h-2 rounded-full" style="width: ${percentage}%"></div>
+                            </div>
+                            <span class="text-sm text-gray-600">${count} (${percentage}%)</span>
+                        </div>
+                    `;
+                    needsDistribution.appendChild(barElement);
+                }
+            });
+            
+            // Urgency distribution
+            const urgencyDistribution = document.getElementById('urgencyDistribution');
+            urgencyDistribution.innerHTML = '';
+            
+            const urgencyCount = { normal: 0, high: 0, urgent: 0 };
+            submissions.forEach(sub => {
+                urgencyCount[sub.urgency]++;
+            });
+            
+            const urgencyLabels = { normal: 'Normal', high: 'Yüksek', urgent: 'Acil' };
+            const urgencyColors = { normal: 'bg-green-500', high: 'bg-yellow-500', urgent: 'bg-red-500' };
+            
+            Object.entries(urgencyCount).forEach(([key, count]) => {
+                if (count > 0) {
+                    const percentage = submissions.length > 0 ? Math.round((count / submissions.length) * 100) : 0;
+                    const barElement = document.createElement('div');
+                    barElement.className = 'flex items-center justify-between';
+                    barElement.innerHTML = `
+                        <span class="text-sm font-medium">${urgencyLabels[key]}</span>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-24 bg-gray-200 rounded-full h-2">
+                                <div class="${urgencyColors[key]} h-2 rounded-full" style="width: ${percentage}%"></div>
+                            </div>
+                            <span class="text-sm text-gray-600">${count} (${percentage}%)</span>
+                        </div>
+                    `;
+                    urgencyDistribution.appendChild(barElement);
+                }
+            });
+            
+            // Daily submissions (last 7 days)
+            const dailySubmissions = document.getElementById('dailySubmissions');
+            dailySubmissions.innerHTML = '';
+            
+            const today = new Date();
+            const dailyCount = {};
+            
+            for (let i = 6; i >= 0; i--) {
+                const date = new Date(today);
+                date.setDate(today.getDate() - i);
+                const dateStr = date.toISOString().split('T')[0];
+                dailyCount[dateStr] = 0;
+            }
+            
+            submissions.forEach(sub => {
+                const subDate = new Date(sub.timestamp);
+                const subDateStr = subDate.toISOString().split('T')[0];
+                if (dailyCount[subDateStr] !== undefined) {
+                    dailyCount[subDateStr]++;
+                }
+            });
+            
+            Object.entries(dailyCount).forEach(([date, count]) => {
+                const dateObj = new Date(date);
+                const dayNames = ['Paz', 'Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt'];
+                const dayName = dayNames[dateObj.getDay()];
+                const formattedDate = `${dayName} ${date.split('-')[2]}`;
+                
+                const barElement = document.createElement('div');
+                barElement.className = 'flex items-center justify-between';
+                barElement.innerHTML = `
+                    <span class="text-sm font-medium">${formattedDate}</span>
+                    <span class="text-sm text-gray-600">${count}</span>
+                `;
+                dailySubmissions.appendChild(barElement);
+            });
+        }
+        
+        // Refresh submissions
+        document.getElementById('refreshSubmissions').addEventListener('click', () => {
+            submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];
+            updateStats();
+            loadSubmissionsList();
+            if (document.getElementById('statsSection').classList.contains('admin-visible')) {
+                updateDetailedStats();
+            }
+        });
+        
+        // Initialize stats on page load
+        updateStats();
+        
+        // Set first tab as active
+        document.querySelector('.nav-link[data-tab="form"]').classList.add('active', 'border-turquoise-500', 'text-turquoise-600');
+    </script>
 </body>
 </html>
+```
