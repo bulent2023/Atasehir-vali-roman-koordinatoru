@@ -104,9 +104,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div class="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div class="flex items-center space-x-4">
-                    <!-- Logo eklendi -->
                     <div class="bg-turquoise-600 p-3 rounded-full">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2Ij4KICA8cGF0aCBkPSJNMTI4IDQwQzEwOCA0MCA4MCA2MCA4MCA2MEwxMjggODBMMTc2IDYwQzE3NiA2MCAxNDggNDAgMTI4IDQweiIgZmlsbD0id2hpdGUiLz4KICA8cGF0aCBkPSJNMjQwIDEyOEMyNDAgMTI4IDIwOCAxMjggMjA4IDEyOEwyMDggMTYwQzIwOCAxNjAgMjQwIDE2MCAyNDAgMTYweiIgZmlsbD0id2hpdGUiLz4KICA8cGF0aCBkPSJNMTYgMTI4QzE2IDEyOCA0OCAxMjggNDggMTI4TDQ4IDE2MEM0OCAxNjAgMTYgMTYwIDE2IDE2MHoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==" alt="Logo" class="h-8 w-8 text-white" />
+                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
                     </div>
                     <div>
                         <h1 class="text-2xl md:text-3xl font-bold text-gray-900">
@@ -710,15 +709,16 @@
         // Fixed admin password
         const ADMIN_PASSWORD = "2025Bjk2025.,.";
         
+        // Firebase configuration - YOUR ACTUAL CONFIG
         const firebaseConfig = {
-  apiKey: "AIzaSyCOqeYrGc7fux8Ym4eEilnG7HMuOWsRigk",
-  authDomain: "atasehir-roman-koordinatoru.firebaseapp.com",
-  databaseURL: "https://atasehir-roman-koordinatoru-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "atasehir-roman-koordinatoru",
-  storageBucket: "atasehir-roman-koordinatoru.firebasestorage.app",
-  messagingSenderId: "1090340718017",
-  appId: "1:1090340718017:web:52980a10227508eec5db40"
-};
+            apiKey: "AIzaSyC0qeYrGc7fux8Ym4eEilnG7HMuOWsRigk",
+            authDomain: "atasehir-roman-koordinatoru.firebaseapp.com",
+            databaseURL: "https://atasehir-roman-koordinatoru-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "atasehir-roman-koordinatoru",
+            storageBucket: "atasehir-roman-koordinatoru.firebasestorage.app",
+            messagingSenderId: "1090340718017",
+            appId: "1:1090340718017:web:52980a10227508eec5db40"
+        };
 
         // Initialize Firebase
         let firebaseApp = null;
@@ -730,8 +730,6 @@
             database = firebase.database();
         } catch (error) {
             console.log("Firebase initialization error:", error);
-            // Fallback to localStorage if Firebase fails
-            console.log("Falling back to localStorage");
         }
 
         // Theme toggle functionality
@@ -870,9 +868,6 @@
         // Load submissions from Firebase
         async function loadSubmissionsFromFirebase() {
             if (!database) {
-                // Fallback to localStorage
-                submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];
-                updateAllViews();
                 return;
             }
             
@@ -885,9 +880,6 @@
                 updateAllViews();
             } catch (error) {
                 console.error("Error loading from Firebase:", error);
-                // Fallback to localStorage
-                submissions = JSON.parse(localStorage.getItem('romanSubmissions')) || [];
-                updateAllViews();
             }
         }
 
@@ -984,10 +976,6 @@
         // Save submission to Firebase
         async function saveSubmissionToFirebase(submission) {
             if (!database) {
-                // Fallback to localStorage
-                submissions.push(submission);
-                localStorage.setItem('romanSubmissions', JSON.stringify(submissions));
-                updateStats();
                 return;
             }
             
@@ -1010,10 +998,6 @@
                 updateStats();
             } catch (error) {
                 console.error("Error saving to Firebase:", error);
-                // Fallback to localStorage
-                submissions.push(submission);
-                localStorage.setItem('romanSubmissions', JSON.stringify(submissions));
-                updateStats();
             }
         }
         
@@ -1100,11 +1084,6 @@
         
         async function clearAllData() {
             if (!database) {
-                // Fallback to localStorage
-                localStorage.removeItem('romanSubmissions');
-                submissions = [];
-                updateAllViews();
-                alert('Tüm veriler başarıyla silindi!');
                 return;
             }
             
@@ -1115,11 +1094,6 @@
                 alert('Tüm veriler başarıyla silindi!');
             } catch (error) {
                 console.error("Error clearing data:", error);
-                // Fallback to localStorage
-                localStorage.removeItem('romanSubmissions');
-                submissions = [];
-                updateAllViews();
-                alert('Tüm veriler başarıyla silindi!');
             }
         }
         
